@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.8.0 on win32)" generated="20191221 00:38:33.484" rpa="false">
+<suite id="s1" name="TestCicil" source="C:\Users\user\eclipse-workspace\TestCicil">
+<suite id="s1-s1" name="TestFungsi10" source="C:\Users\user\eclipse-workspace\TestCicil\TestFungsi10.robot">
+<test id="s1-s1-t1" name="AddWishlist">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>sys.modules['selenium.webdriver.chrome.options'].Options()</arg>
+<arg>sys</arg>
+</arguments>
+<assign>
+<var>${options}</var>
+</assign>
+<msg timestamp="20191221 00:38:33.779" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x03E1F970&gt;</msg>
+<status status="PASS" starttime="20191221 00:38:33.779" endtime="20191221 00:38:33.779"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-notifications</arg>
+</arguments>
+<status status="PASS" starttime="20191221 00:38:33.779" endtime="20191221 00:38:33.779"></status>
+</kw>
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<arguments>
+<arg>Chrome</arg>
+<arg>options=${options}</arg>
+</arguments>
+<assign>
+<var>${driver}</var>
+</assign>
+<msg timestamp="20191221 00:38:33.779" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg timestamp="20191221 00:38:39.274" level="INFO">${driver} = 1</msg>
+<status status="PASS" starttime="20191221 00:38:33.779" endtime="20191221 00:38:39.274"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>http://automationpractice.com/index.php?controller=authentication&amp;back=my-account</arg>
+</arguments>
+<msg timestamp="20191221 00:38:39.274" level="INFO">Opening url 'http://automationpractice.com/index.php?controller=authentication&amp;back=my-account'</msg>
+<status status="PASS" starttime="20191221 00:38:39.274" endtime="20191221 00:38:45.908"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<status status="PASS" starttime="20191221 00:38:45.909" endtime="20191221 00:38:45.913"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20191221 00:38:47.915" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20191221 00:38:45.914" endtime="20191221 00:38:47.916"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20191221 00:38:47.918" endtime="20191221 00:38:52.123"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20191221 00:38:57.134" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20191221 00:38:52.125" endtime="20191221 00:38:57.134"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="email"]</arg>
+<arg>hariatytobing@gmail.com</arg>
+</arguments>
+<msg timestamp="20191221 00:38:57.139" level="INFO">Typing text 'hariatytobing@gmail.com' into text field '//*[@id="email"]'.</msg>
+<status status="PASS" starttime="20191221 00:38:57.134" endtime="20191221 00:38:57.392"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="passwd"]</arg>
+<arg>Oktober98</arg>
+</arguments>
+<msg timestamp="20191221 00:38:57.394" level="INFO">Typing text 'Oktober98' into text field '//*[@id="passwd"]'.</msg>
+<status status="PASS" starttime="20191221 00:38:57.393" endtime="20191221 00:38:57.575"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="SubmitLogin"]</arg>
+</arguments>
+<msg timestamp="20191221 00:38:57.576" level="INFO">Clicking element '//*[@id="SubmitLogin"]'.</msg>
+<status status="PASS" starttime="20191221 00:38:57.576" endtime="20191221 00:38:59.565"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20191221 00:39:04.584" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20191221 00:38:59.565" endtime="20191221 00:39:04.584"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="header_logo"]/a/img</arg>
+</arguments>
+<msg timestamp="20191221 00:39:04.584" level="INFO">Clicking element '//*[@id="header_logo"]/a/img'.</msg>
+<status status="PASS" starttime="20191221 00:39:04.584" endtime="20191221 00:39:09.261"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20191221 00:39:14.264" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20191221 00:39:09.262" endtime="20191221 00:39:14.265"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="homefeatured"]/li[1]/div/div[2]/div[2]/a[2]</arg>
+</arguments>
+<msg timestamp="20191221 00:39:14.269" level="INFO">Clicking element '//*[@id="homefeatured"]/li[1]/div/div[2]/div[2]/a[2]'.</msg>
+<status status="PASS" starttime="20191221 00:39:14.267" endtime="20191221 00:39:17.269"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20191221 00:39:22.284" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20191221 00:39:17.270" endtime="20191221 00:39:22.284"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="buy_block"]/div/div[3]/p</arg>
+</arguments>
+<msg timestamp="20191221 00:39:22.284" level="INFO">Clicking element '//*[@id="buy_block"]/div/div[3]/p'.</msg>
+<status status="PASS" starttime="20191221 00:39:22.284" endtime="20191221 00:39:22.362"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20191221 00:39:27.364" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20191221 00:39:22.362" endtime="20191221 00:39:27.364"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="wishlist_button"]</arg>
+</arguments>
+<msg timestamp="20191221 00:39:27.364" level="INFO">Clicking element '//*[@id="wishlist_button"]'.</msg>
+<status status="PASS" starttime="20191221 00:39:27.364" endtime="20191221 00:39:27.488"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20191221 00:39:32.494" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20191221 00:39:27.489" endtime="20191221 00:39:32.494"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="product"]/div[2]/div/div/a</arg>
+</arguments>
+<msg timestamp="20191221 00:39:32.494" level="INFO">Clicking element '//*[@id="product"]/div[2]/div/div/a'.</msg>
+<status status="PASS" starttime="20191221 00:39:32.494" endtime="20191221 00:39:32.584"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="header"]/div[2]/div/div/nav/div[1]/a</arg>
+</arguments>
+<msg timestamp="20191221 00:39:32.586" level="INFO">Clicking element '//*[@id="header"]/div[2]/div/div/nav/div[1]/a'.</msg>
+<status status="PASS" starttime="20191221 00:39:32.585" endtime="20191221 00:39:35.366"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="center_column"]/div/div[2]/ul/li/a</arg>
+</arguments>
+<msg timestamp="20191221 00:39:35.368" level="INFO">Clicking element '//*[@id="center_column"]/div/div[2]/ul/li/a'.</msg>
+<status status="PASS" starttime="20191221 00:39:35.367" endtime="20191221 00:39:37.399"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="wishlist_15237"]/td[5]/a</arg>
+</arguments>
+<msg timestamp="20191221 00:39:37.401" level="INFO">Clicking element 'xpath=//*[@id="wishlist_15237"]/td[5]/a'.</msg>
+<status status="PASS" starttime="20191221 00:39:37.400" endtime="20191221 00:39:37.520"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>15</arg>
+</arguments>
+<status status="PASS" starttime="20191221 00:39:37.520" endtime="20191221 00:39:37.522"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Test Completed</arg>
+</arguments>
+<msg timestamp="20191221 00:39:37.524" level="INFO">Test Completed</msg>
+<status status="PASS" starttime="20191221 00:39:37.523" endtime="20191221 00:39:37.524"></status>
+</kw>
+<status status="PASS" starttime="20191221 00:38:33.779" endtime="20191221 00:39:37.525" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20191221 00:38:33.554" endtime="20191221 00:39:37.527"></status>
+</suite>
+<status status="PASS" starttime="20191221 00:38:33.524" endtime="20191221 00:39:37.530"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="TestCicil">TestCicil</stat>
+<stat pass="1" fail="0" id="s1-s1" name="TestFungsi10">TestCicil.TestFungsi10</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
